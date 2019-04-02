@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+<span id="messageArea"> </span>
+
+	<script>
+
+function loop(){
+	for(let i=101;i>100;i++){
+		if (i>1000){
+			throw new Error("i is "+i);
+		}
+	}
+}
+
+window.onload= () => {
+	try{
+
+		loop();
+
+	}
+	catch(errorT){
+		console.log("aa");
+		document.getElementById("messageArea").innerHTML= errorT.message;
+	}
+}
+
+
+
+
+	</script>
+	
+</body>
+</html>
